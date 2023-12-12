@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +34,6 @@ public class FrontControllerServletV2 extends HttpServlet {
             return;
         }
         MyView view = controller.process(request, response);
-        view.render(mv.getModel(), request, response);
+        view.render(request, response);
     }
 }

@@ -39,8 +39,7 @@ public class frontControllerServletV3 extends HttpServlet {
     private Map<String, String> createParamMap(HttpServletRequest request) {
         Map<String, String> paramMap = new HashMap<>();
         request.getParameterNames().asIterator()
-                .forEachRemaining(paramName -> paramMap.put(paramName,
-                        request.getParameter(paramName)));
+                .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
         return paramMap;
     }
     private MyView viewResolver(String viewName) {
